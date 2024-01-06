@@ -5,4 +5,6 @@ WORKDIR /hidocker
 COPY main.c .
 
 RUN gcc main.c -lm -o pepi
-ENTRYPOINT ["./pepi"]
+
+WORKDIR /testrun
+ENTRYPOINT ["/hidocker/pepi"]
